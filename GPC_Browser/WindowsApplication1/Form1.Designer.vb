@@ -29,7 +29,7 @@ Partial Class Main
         Me.BookmarksToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabControl = New VIBlend.WinForms.Controls.vTabControl()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,21 +72,25 @@ Partial Class Main
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'TabControl1
+        'TabControl
         '
-        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.TabControl1.Location = New System.Drawing.Point(0, 27)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1008, 702)
-        Me.TabControl1.TabIndex = 1
+        Me.TabControl.AllowAnimations = True
+        Me.TabControl.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.TabControl.Location = New System.Drawing.Point(0, 27)
+        Me.TabControl.Name = "TabControl"
+        Me.TabControl.Padding = New System.Windows.Forms.Padding(0, 45, 0, 0)
+        Me.TabControl.Size = New System.Drawing.Size(1008, 702)
+        Me.TabControl.TabAlignment = VIBlend.WinForms.Controls.vTabPageAlignment.Top
+        Me.TabControl.TabIndex = 1
+        Me.TabControl.TabsAreaBackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.TabControl.VIBlendTheme = VIBlend.Utilities.VIBLEND_THEME.VISTABLUE
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.TabControl)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -105,5 +109,5 @@ Partial Class Main
     Friend WithEvents BookmarksToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents TabControl As VIBlend.WinForms.Controls.vTabControl
 End Class
